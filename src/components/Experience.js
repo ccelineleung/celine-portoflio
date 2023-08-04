@@ -1,17 +1,28 @@
 import React, { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import Lilcon from './Lilcon'
+import Lilcon from './Lilcon';
 
 const Details = ({ position, company, time, address, experience }) => {
+  const ref = useRef(null);
+
   return (
-    <li className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
-    <Lilcon />
-      <h3 className='capitalize font-bold text-2xl'>{position}&nbsp;</h3>
-      <h3 className='capitalize font-bold text-dark/80 '>{company}</h3>
-      <span className='capitalize font-medium text-dark/75'>
-        {time} | {address}
-      </span>
-      <p className='font-medium w-full'>{experience}</p>
+    <li
+      ref={ref}
+      className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'
+    >
+      <Lilcon reference={ref} />
+      <motion.div
+        initial={{ y: 80 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.8, type: 'spring' }}
+      >
+        <h3 className='capitalize font-bold text-2xl'>{position}&nbsp;</h3>
+        <h3 className='capitalize font-bold text-dark/80 '>{company}</h3>
+        <span className='capitalize font-medium text-dark/75'>
+          {time} | {address}
+        </span>
+        <p className='font-medium w-full'>{experience}</p>
+      </motion.div>
     </li>
   );
 };
@@ -33,7 +44,7 @@ const Experience = () => {
         <div ref={ref} className='w-[75%] mx-auto relative'>
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className='absolute left-8 top-0 w-[4px] h-full bg-dark origin-top '
+            className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top '
           />
 
           <ul className='w-full flex flex-col items-start justify-between ml-4'>
