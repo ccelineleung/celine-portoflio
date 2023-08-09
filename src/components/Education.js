@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import Lilcon from './Lilcon';
 
-const Details = ({ position, company, time, address, experience }) => {
+const Details = ({ position, time, address, experience }) => {
   const ref = useRef(null);
 
   return (
@@ -26,7 +26,7 @@ const Details = ({ position, company, time, address, experience }) => {
   );
 };
 
-const Experience = () => {
+const Education = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -71,4 +71,4 @@ Engineered a mock GraphQL playground for developers to test queries for users wi
   );
 };
 
-export default Experience;
+export default Education;
