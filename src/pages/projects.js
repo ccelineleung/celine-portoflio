@@ -4,13 +4,16 @@ import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import LatchQL from '../../public/images/cost-preview.jpg';
+import JPEGPic from '../../public/images/marketplace.jpeg';
+import loan from '../../public/images/loan.png';
 import { GithubIcon } from '@/components/Icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import LatchQLImg from '../../public/images/LatchQLimg.png';
 
 const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
   return (
-    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl'>
+    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative'>
       <Link
         href={projLink}
         className='p-12 w-1/2 cursor-pointer overflow-hidden'
@@ -38,20 +41,41 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
 
 const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
-    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl'>
+    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative'>
       <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto'>
         <Image src={img} alt={name} className='rounded-3xl w-full h-auto' />
       </Link>
 
-      <div className='mt-1 grid items-start justify-between pl-6'>
+      <div className='w-full mt-0.5 grid items-start justify-between pl-6'>
         <span className='text-primary font-medium text-xl'>{projType}</span>
-        <h2 className='my-1 w-full text-left text-2xl font-bold '>{name}</h2>
-        <p className='my-1 font-medium text-dark'>{describution}</p>
-        <div className='mt-1 grid items-center'>
-          <Link href={gitHub} className='mt-1 grid items-center'>
-            <GithubIcon className='w-6' />
+        <h2 className='my-0.5 w-full text-left text-2xl font-bold '>{name}</h2>
+        <p className='my-0.5 font-medium text-dark'>{describution}</p>
+        <div className='my-2 grid items-center'>
+          <Link href={gitHub} className='w-7'>
+            <GithubIcon />
           </Link>
         </div>
+      </div>
+    </article>
+  );
+};
+
+const Paper = ({ title, summary, articleLink, img ,types}) => {
+  return (
+    <article className='w-full flex justify-between items-start border border-solid border-dark rounded-3xl shadow-2xl relative'>
+      <Link
+        href={articleLink}
+        className='p-12 w-1/2 cursor-pointer overflow-hidden'
+      >
+        <Image src={img} alt={title} className='w-full h-auto rounded-3xl' />
+      </Link>
+      <div className='w-1/2 flex flex-col justify-between items-start pl-6 my-10'>
+      <span className='text-primary font-medium text-lg'>{types}</span>
+        <Link href={articleLink} >
+          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-4'>{title}</h1>
+        </Link>
+        <p className='my-2 font-medium text-dark'>{summary}</p>
+        <span className='text-primary font-medium text-sm'>5 min read</span>
       </div>
     </article>
   );
@@ -66,7 +90,7 @@ const projects = () => {
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center'>
         <Layout className='pt-16'>
-          <AnimatedText text='Projects' className='mb-16' />
+          <AnimatedText text='Projects' className='mb-16 relative' />
 
           <div className='grid grid-cols-12 gap-24'>
             <div className='col-span-12'>
@@ -84,13 +108,34 @@ const projects = () => {
               <SmallProj
                 projType='Commerical Website'
                 name='JPEG-Marketplace'
-                describution='A commmerical website for customer to buy and sell JPEG'
-                img={LatchQL}
+                describution='A marketplace-simulation designed for users to buy, sell and trade fake digital assets.'
+                img={JPEGPic}
                 gitHub='https://github.com/Non-Fungibles/JPEG-Marketplace'
               />
             </div>
 
-            <div className='col-span-6'>Proj 2</div>
+            <div className='col-span-6'>
+              <SmallProj
+                projType='Website'
+                name='Loan Master'
+                describution='A website for customer to calculate mortgage rate and save all the data they want.'
+                img={loan}
+                gitHub='https://github.com/ccelineleung/mortgageloan-cal'
+              />
+            </div>
+          </div>
+
+          <AnimatedText text='Articles' className='mt-14 mb-14 relative' />
+          <div className='grid grid-cols-12 gap-24'>
+            <div className='col-span-12'>
+              <Paper
+                title='LatchQL: customizable security measures for GraphQL API’s'
+                summary={`Exploring LatchQL's enhancements to GraphQL APIs, enabling real-time capabilities and dynamic updates through efficient subscription handling.`}
+                articleLink='https://medium.com/@mcphail.alex/latchql-c88ce527ec50'
+                img={LatchQLImg}
+                types='Medium'
+              />
+            </div>
           </div>
         </Layout>
       </main>
