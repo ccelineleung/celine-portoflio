@@ -11,6 +11,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import LatchQLImg from '../../public/images/LatchQLimg.png';
 
+const FramerImage = motion(Image);
+
 const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
   return (
     <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative'>
@@ -18,7 +20,13 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
         href={projLink}
         className='p-12 w-1/2 cursor-pointer overflow-hidden'
       >
-        <Image src={img} alt={name} className='w-full h-auto rounded-3xl' />
+        <FramerImage
+          src={img}
+          alt={name}
+          className='w-full h-auto rounded-3xl'
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
@@ -43,7 +51,13 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
     <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative'>
       <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto'>
-        <Image src={img} alt={name} className='rounded-3xl w-full h-auto' />
+        <FramerImage
+          src={img}
+          alt={name}
+          className='rounded-3xl w-full h-auto overflow-hidden'
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
 
       <div className='w-full mt-0.5 grid items-start justify-between pl-6'>
@@ -60,19 +74,27 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   );
 };
 
-const Paper = ({ title, summary, articleLink, img ,types}) => {
+const Paper = ({ title, summary, articleLink, img, types }) => {
   return (
-    <article className='w-full flex justify-between items-start border border-solid border-dark rounded-3xl shadow-2xl relative'>
+    <article className='w-full flex justify-between items-center border border-solid border-dark rounded-3xl shadow-2xl relative'>
       <Link
         href={articleLink}
         className='p-12 w-1/2 cursor-pointer overflow-hidden'
       >
-        <Image src={img} alt={title} className='w-full h-auto rounded-3xl' />
+        <FramerImage
+          src={img}
+          alt={title}
+          className='rounded-3xl w-full h-auto overflow-hidden'
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
-      <div className='w-1/2 flex flex-col justify-between items-start pl-6 my-10'>
-      <span className='text-primary font-medium text-lg'>{types}</span>
-        <Link href={articleLink} >
-          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-4'>{title}</h1>
+      <div className='w-1/2 flex flex-col justify-between items-start p-6 my-10'>
+        <span className='text-primary font-medium text-lg'>{types}</span>
+        <Link href={articleLink}>
+          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-4'>
+            {title}
+          </h1>
         </Link>
         <p className='my-2 font-medium text-dark'>{summary}</p>
         <span className='text-primary font-medium text-sm'>5 min read</span>

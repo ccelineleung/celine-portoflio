@@ -4,6 +4,7 @@ import Logo from './Logo';
 import { useRouter } from 'next/router';
 import { LinkedInIcon, GithubIcon } from './Icons';
 import { motion } from 'framer-motion';
+import useDarkTheme from './hooks/useDarkTheme';
 
 const CustomeLink = ({ href, title, className = '' }) => {
   const router = useRouter();
@@ -23,6 +24,9 @@ const CustomeLink = ({ href, title, className = '' }) => {
 };
 
 export default function NavBar() {
+
+  const [mode,setMode] = useDarkTheme()
+
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
       <nav>
@@ -51,6 +55,9 @@ export default function NavBar() {
         >
           <LinkedInIcon />
         </motion.a>
+
+      <button></button>
+
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
