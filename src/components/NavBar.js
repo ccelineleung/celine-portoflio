@@ -4,7 +4,8 @@ import Logo from './Logo';
 import { useRouter } from 'next/router';
 import { LinkedInIcon, GithubIcon } from './Icons';
 import { motion } from 'framer-motion';
-import useDarkTheme from './hooks/useDarkTheme';
+import useThemeSwitcher from './hooks/useThemeSwitcher';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/Bs';
 
 const CustomeLink = ({ href, title, className = '' }) => {
   const router = useRouter();
@@ -13,7 +14,7 @@ const CustomeLink = ({ href, title, className = '' }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light ${
           router.asPath === href ? 'w-full' : 'w-0'
         }`}
       >
@@ -24,11 +25,10 @@ const CustomeLink = ({ href, title, className = '' }) => {
 };
 
 export default function NavBar() {
-
-  const [mode,setMode] = useDarkTheme()
+  const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <header className='w-full px-32 py-8 font-medium flex items-center justify-between'>
+    <header className='w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light'>
       <nav>
         <CustomeLink href='/' title='Home' className='mr-4' />
         <CustomeLink href='/about' title='About' className='mx-4' />
@@ -56,8 +56,16 @@ export default function NavBar() {
           <LinkedInIcon />
         </motion.a>
 
-      <button></button>
-
+        <button
+          onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+          className='ml-3 flex items-center justify-center rounded-full p-1 '
+        >
+          {mode === 'dark' ? (
+            <BsFillSunFill className='fill-light ' />
+          ) : (
+            <BsFillMoonStarsFill className='fill-dark' />
+          )}
+        </button>
       </nav>
       <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />

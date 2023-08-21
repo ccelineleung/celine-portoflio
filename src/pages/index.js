@@ -25,7 +25,7 @@ export default function Home() {
                 text='I am a full stack software Engineer'
                 className='!text-6xl !text-left'
               />
-              <p className='my-4 text-base font-medium'>
+              <p className='my-4 text-base font-medium dark:text-light'>
                 I am a full stack software Engineer I am a full stack software
                 Engineer I am a full stack software Engineer I am a full stack
                 software Engineer
@@ -34,14 +34,14 @@ export default function Home() {
                 <Link
                   href='resume.pdf'
                   target={'_blank'}
-                  className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark'
+                  className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light'
                   // download={true}
                 >
                   Resume
                   <LinkArrow className={'w-6 ml-1'}/>
                 </Link>
                 <Link href='mailto:celineleung412@gmail.com' target={'_blank'}
-                className='ml-4 items-center text-lg font-medium capitalize text-dark underline'>
+                className='ml-4 items-center text-lg font-medium capitalize text-dark underline dark:text-light'>
                   Contact
                 </Link>
               </div>
