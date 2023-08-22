@@ -8,29 +8,29 @@ import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience'
 import Education from '../components/Education'
 
-const AnimatedNumbers = ({ value }) => {
-  const ref = useRef(null);
+// const AnimatedNumbers = ({ value }) => {
+//   const ref = useRef(null);
 
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(ref, { once: true });
+//   const motionValue = useMotionValue(0);
+//   const springValue = useSpring(motionValue, { duration: 3000 });
+//   const isInView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
-    }
-  }, [isInView, value, motionValue]);
+//   useEffect(() => {
+//     if (isInView) {
+//       motionValue.set(value);
+//     }
+//   }, [isInView, value, motionValue]);
 
-  useEffect(() => {
-    springValue.on('change', (latest) => {
-      if (ref.current && latest.toFixed(0) <= value) {
-        ref.current.textContent = latest.toFixed(0);
-      }
-    });
-  }, [springValue, value]);
+//   useEffect(() => {
+//     springValue.on('change', (latest) => {
+//       if (ref.current && latest.toFixed(0) <= value) {
+//         ref.current.textContent = latest.toFixed(0);
+//       }
+//     });
+//   }, [springValue, value]);
 
-  return <span ref={ref}></span>;
-};
+//   return <span ref={ref}></span>;
+// };
 
 const about = () => {
   return (
@@ -73,6 +73,8 @@ const about = () => {
                 src={profilePic}
                 alt='celine'
                 className='w-full h-auto rounded-2xl'
+                priority
+                sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
               ></Image>
             </div>
 

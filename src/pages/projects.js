@@ -15,7 +15,7 @@ const FramerImage = motion(Image);
 
 const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
   return (
-    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-dark dark:border-light'>
+    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-dark dark:border-light dark:shadow-lg dark:shadow-light'>
       <Link
         href={projLink}
         className='p-12 w-1/2 cursor-pointer overflow-hidden'
@@ -26,6 +26,8 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
           className='w-full h-auto rounded-3xl'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
         />
       </Link>
 
@@ -51,7 +53,7 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
 
 const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
-    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative dark:border-light dark:bg-dark'>
+    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light'>
       <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto'>
         <FramerImage
           src={img}
@@ -59,6 +61,8 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
           className='rounded-3xl w-full h-auto overflow-hidden'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
         />
       </Link>
 
@@ -71,7 +75,7 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
           {describution}
         </p>
         <div className='my-2 grid items-center'>
-          <Link href={gitHub} className='w-7  dark:bg-light rounded-full'>
+          <Link href={gitHub} className='w-7 '>
             <GithubIcon />
           </Link>
         </div>
@@ -82,7 +86,7 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
 
 const Paper = ({ title, summary, articleLink, img, types }) => {
   return (
-    <article className='w-full flex justify-between items-center border border-solid border-dark rounded-3xl shadow-2xl relative  dark:border-light dark:bg-dark'>
+    <article className='w-full flex justify-between items-center border border-solid border-dark rounded-3xl shadow-2xl relative  dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light'>
       <Link
         href={articleLink}
         className='p-12 w-1/2 cursor-pointer overflow-hidden'
@@ -93,6 +97,8 @@ const Paper = ({ title, summary, articleLink, img, types }) => {
           className='rounded-3xl w-full h-auto overflow-hidden'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
         />
       </Link>
       <div className='w-1/2 flex flex-col justify-between items-start p-6 my-10'>
@@ -102,7 +108,9 @@ const Paper = ({ title, summary, articleLink, img, types }) => {
             {title}
           </h1>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light/75'>{summary}</p>
+        <p className='my-2 font-medium text-dark dark:text-light/75'>
+          {summary}
+        </p>
         <span className='text-primaryDark font-medium text-sm'>5 min read</span>
       </div>
     </article>
@@ -116,7 +124,7 @@ const projects = () => {
         <title>Celine's Portoflie | Projects</title>
         <meta name='description' content='Projects' />
       </Head>
-      <main className='w-full mb-16 flex flex-col items-center justify-center'>
+      <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText text='Projects' className='mb-16 relative' />
 
