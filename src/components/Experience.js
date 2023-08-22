@@ -16,12 +16,12 @@ const Details = ({ position, company, time, address, experience }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.8, type: 'spring' }}
       >
-        <h3 className='capitalize font-bold text-2xl'>{position}&nbsp;</h3>
-        <h3 className='capitalize font-bold text-dark/80 '>{company}</h3>
-        <span className='capitalize font-medium text-dark/75'>
+        <h3 className='capitalize font-bold text-2xl dark:text-light/90'>{position}&nbsp;</h3>
+        <h3 className='capitalize font-bold text-dark/80 dark:text-light/50'>{company}</h3>
+        <span className='capitalize font-medium text-dark/75 dark:text-light/50'>
           {time} | {address}
         </span>
-        <p className='font-medium w-full'>{experience}</p>
+        <p className='font-medium w-full dark:text-light/90'>{experience}</p>
       </motion.div>
     </li>
   );
@@ -37,14 +37,14 @@ const Experience = () => {
   return (
     <>
       <div className='my-64'>
-        <h2 className='font-bold text-8xl mb-32 w-full text-center'>
+        <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light'>
           Experience
         </h2>
 
         <div ref={ref} className='w-[75%] mx-auto relative'>
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top '
+            className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark dark:shadow-3xl'
           />
 
           <ul className='w-full flex flex-col items-start justify-between ml-4'>
