@@ -15,10 +15,10 @@ const FramerImage = motion(Image);
 
 const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
   return (
-    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-dark dark:border-light dark:shadow-lg dark:shadow-light'>
+    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-dark dark:border-light dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4 '>
       <Link
         href={projLink}
-        className='p-12 w-1/2 cursor-pointer overflow-hidden'
+        className='p-10 w-1/2 cursor-pointer overflow-hidden lg:w-full lg:!p-7 md:!p-5 sm:!p-0'
       >
         <FramerImage
           src={img}
@@ -31,19 +31,27 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
         />
       </Link>
 
-      <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
-        <span className='text-primary font-medium text-xl'>{projType}</span>
+      <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
+        <span className='text-primary font-medium text-xl xs:text-base '>
+          {projType}
+        </span>
         <Link href={projLink}>
-          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-2 dark:text-light hover:dark:underline-light'>
+          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-2 dark:text-light hover:dark:underline-light md:my-1 sm:text-sm'>
             {name}
           </h1>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light/75'>
+        <p className='my-2 font-medium text-dark dark:text-light/75 md:my-1 sm:text-sm'>
           {describution}
         </p>
-        <div className='mt-2 flex items-center'>
-          <Link href={gitHub} className='w-10 dark:bg-light rounded-full'>
+        <div className='mt-2 flex items-center md:mt-1'>
+          <Link href={gitHub} className='w-10 dark:bg-dark rounded-full'>
             <GithubIcon />
+          </Link>
+          <Link
+            href={projLink}
+            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base'
+          >
+            Download
           </Link>
         </div>
       </div>
@@ -53,7 +61,7 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
 
 const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
-    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light'>
+    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light xs:p-4'>
       <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto'>
         <FramerImage
           src={img}
@@ -67,11 +75,13 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
       </Link>
 
       <div className='w-full mt-0.5 grid items-start justify-between pl-6'>
-        <span className='text-primary font-medium text-xl'>{projType}</span>
-        <h2 className='my-0.5 w-full text-left text-2xl font-bold dark:text-light'>
+        <span className='text-primary font-medium text-xl lg:text-lg md:text-base'>
+          {projType}
+        </span>
+        <h2 className='my-0.5 w-full text-left text-2xl font-bold dark:text-light md:text-xl'>
           {name}
         </h2>
-        <p className='my-0.5 font-medium text-dark dark:text-light/75'>
+        <p className='my-0.5 font-medium text-dark dark:text-light/75 md:text-base'>
           {describution}
         </p>
         <div className='my-2 grid items-center'>
@@ -86,10 +96,10 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
 
 const Paper = ({ title, summary, articleLink, img, types }) => {
   return (
-    <article className='w-full flex justify-between items-center border border-solid border-dark rounded-3xl shadow-2xl relative  dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light'>
+    <article className='w-full flex justify-between items-center border border-solid border-dark rounded-3xl shadow-2xl relative  dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4'>
       <Link
         href={articleLink}
-        className='p-12 w-1/2 cursor-pointer overflow-hidden'
+        className='p-10 w-1/2 cursor-pointer overflow-hidden lg:w-full lg:!p-7 md:!p-5 sm:!p-0'
       >
         <FramerImage
           src={img}
@@ -101,17 +111,21 @@ const Paper = ({ title, summary, articleLink, img, types }) => {
           sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
         />
       </Link>
-      <div className='w-1/2 flex flex-col justify-between items-start p-6 my-10'>
-        <span className='text-primary font-medium text-lg'>{types}</span>
+      <div className='w-1/2 flex flex-col justify-between items-start p-6 my-10 lg:w-full lg:pl-0 lg:pt-6'>
+        <span className='text-primary font-medium text-lg xs:text-base'>
+          {types}
+        </span>
         <Link href={articleLink}>
-          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-4 dark:text-light '>
+          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-4 dark:text-light md:my-1 sm:text-sm'>
             {title}
           </h1>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light/75'>
+        <p className='my-2 font-medium text-dark dark:text-light/75 md:my-1 sm:text-sm'>
           {summary}
         </p>
-        <span className='text-primaryDark font-medium text-sm'>5 min read</span>
+        <span className='text-primaryDark font-medium text-sm sm:hidden'>
+          5 min read
+        </span>
       </div>
     </article>
   );
@@ -126,9 +140,12 @@ const projects = () => {
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
         <Layout className='pt-16'>
-          <AnimatedText text='Projects' className='mb-16 relative' />
+          <AnimatedText
+            text='Projects'
+            className='mb-16 relative lg:!text-7xl  sm:!text-6xl xs:!text-4xl sm:mb-8'
+          />
 
-          <div className='grid grid-cols-12 gap-24'>
+          <div className='grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
             <div className='col-span-12'>
               <BigProj
                 projType='NPM Package'
@@ -140,7 +157,7 @@ const projects = () => {
               />
             </div>
 
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <SmallProj
                 projType='Commerical Website'
                 name='JPEG-Marketplace'
@@ -150,7 +167,7 @@ const projects = () => {
               />
             </div>
 
-            <div className='col-span-6'>
+            <div className='col-span-6 sm:col-span-12'>
               <SmallProj
                 projType='Website'
                 name='Loan Master'
@@ -161,8 +178,11 @@ const projects = () => {
             </div>
           </div>
 
-          <AnimatedText text='Articles' className='mt-14 mb-14 relative' />
-          <div className='grid grid-cols-12 gap-24'>
+          <AnimatedText
+            text='Articles'
+            className='mt-14 mb-14 relative lg:!text-7xl  sm:!text-6xl xs:!text-4xl sm:mb-8'
+          />
+          <div className='grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
             <div className='col-span-12'>
               <Paper
                 title='LatchQL: customizable security measures for GraphQL API’s'

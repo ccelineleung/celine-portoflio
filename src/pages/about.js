@@ -5,8 +5,8 @@ import Layout from '@/components/Layout';
 import Image from 'next/image';
 import profilePic from '../../public/images/profile/dev-portf-2.JPG';
 import { useSpring, useMotionValue, useInView } from 'framer-motion';
-import Experience from '../components/Experience'
-import Education from '../components/Education'
+import Experience from '../components/Experience';
+import Education from '../components/Education';
 
 // const AnimatedNumbers = ({ value }) => {
 //   const ref = useRef(null);
@@ -41,9 +41,12 @@ const about = () => {
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
-          <AnimatedText text='Passion Fuels Purpose!' className='mb-16' />
-          <div className='grid w-full grid-cols-8 gap-16'>
-            <div className='col-span-4 flex flex-col items-start justify-start'>
+          <AnimatedText
+            text='Passion Fuels Purpose!'
+            className='mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8'
+          />
+          <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
+            <div className='col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8'>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
                 Biography
               </h2>
@@ -67,7 +70,7 @@ const about = () => {
                 your next project.
               </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8'>
+            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8 md:order-1 md:col-span-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark/80 dark:bg-light/80' />
               <Image
                 src={profilePic}
@@ -88,7 +91,7 @@ const about = () => {
                 </h2>
               </div> */}
 
-              {/* <div className='flex flex-col items-end justify-center'>
+            {/* <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={40} /> +
                 </span>
@@ -97,7 +100,7 @@ const about = () => {
                 </h2>
               </div> */}
 
-              {/* <div className='flex flex-col items-end justify-center'>
+            {/* <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                   <AnimatedNumbers value={5} /> +
                 </span>
@@ -105,7 +108,7 @@ const about = () => {
                   years of experiences
                 </h2>
               </div> */}
-              
+
             {/* </div> */}
           </div>
 
