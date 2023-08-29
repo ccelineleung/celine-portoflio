@@ -21,7 +21,7 @@ export default function Home() {
               <Image
                 src={porfilePic}
                 alt='Celine'
-                className='w-full h-auto rounded-full shadow-2xl pr-10 p-10 lg:hidden md:inline-block md:w-full md:p-7'
+                className='w-full h-auto rounded-full pr-10 p-10 lg:hidden md:inline-block md:w-full md:p-7'
                 priority
                 sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
               />
