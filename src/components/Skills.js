@@ -20,7 +20,7 @@ const SkillsLogo = ({ img, name }) => {
       src={img}
       alt={name}
       className='w-full h-auto rounded-3xl'
-      whileHover={{ scale: 2 }}
+      whileHover={{ scale: 1.1 }}
       transition={{ duration: 0.2 }}
       priority
       sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'

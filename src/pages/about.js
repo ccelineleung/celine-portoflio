@@ -7,7 +7,7 @@ import profilePic from '../../public/images/profile/dev-portf-2.JPG';
 import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
-import  Skills  from '../components/Skills';
+import Skills from '../components/Skills';
 
 // const AnimatedNumbers = ({ value }) => {
 //   const ref = useRef(null);
@@ -52,23 +52,33 @@ const about = () => {
                 Biography
               </h2>
               <p className='font-medium  dark:text-light'>
-                Hi, I'm CodeBucks, a web developer and UI/UX designer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients' visions to life.
+                Hi, I'm Celine, a dedicated Frontend Engineer skilled in
+                curating visually engaging and highly functional digital
+                experiences. My professional journey in web development is
+                characterized by a persistent pursuit of innovation and a
+                commitment to delivering exceptional outcomes.
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
-                I believe that design is about more than just making things look
-                pretty – it's about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                My design philosophy transcends aesthetics, focusing on
+                dissecting complex challenges and engineering interfaces that
+                offer seamless user interactions. I thrive on tackling intricate
+                problems and take pride in designing solutions that prioritize
+                both form and function.
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
-                Whether I'm working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                With a proficient toolkit encompassing JavaScript, TypeScript,
+                React, Redux, and more, I possess the technical prowess to craft
+                captivating user interfaces. Notably, I've developed an NPM
+                middleware package for GraphQL APIs, enhancing security via JSON
+                Web Tokens and elevating authentication accuracy by 30%. My
+                endeavors range from tech accelerator collaborations to
+                contributions in the open-source realm, including written
+                insights shared through Medium articles and tech talks.
+              </p>
+              <p className='my-4 font font-medium  dark:text-light'>
+                I'm enthused about the potential of aligning my skills with your
+                projects. Let's collaborate to craft digital experiences that
+                resonate with your audience.
               </p>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
                 Skills

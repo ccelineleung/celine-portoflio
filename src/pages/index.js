@@ -21,26 +21,24 @@ export default function Home() {
               <Image
                 src={porfilePic}
                 alt='Celine'
-                className='w-full h-auto rounded-full pr-10 p-10 lg:hidden md:inline-block md:w-full md:p-7'
+                className='w-full h-auto rounded-full pr-14 p-14 lg:hidden md:inline-block md:w-full md:p-7'
                 priority
                 sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
               />
             </div>
             <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
               <AnimatedText
-                text='I am a full stack software Engineer'
+                text={`Welcome! This is Celine's Portofolio`}
                 className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
               />
-              <p className='my-4 text-base font-medium dark:text-light md:text-sm sm:text-xs'>
-                I am a full stack software Engineer I am a full stack software
-                Engineer I am a full stack software Engineer I am a full stack
-                software Engineer
-              </p>
+              {/* <p className='my-4 text-base font-medium dark:text-light md:text-sm sm:text-xs'>
+                I am a full stack software Engineer.
+              </p> */}
               <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link
                   href='resume.pdf'
                   target={'_blank'}
-                  className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
+                  className='flex items-center bg-dark/80 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
                   // download={true}
                 >
                   Resume
@@ -49,7 +47,7 @@ export default function Home() {
                 <Link
                   href='mailto:celineleung412@gmail.com'
                   target={'_blank'}
-                  className='ml-4 items-center text-lg font-medium capitalize text-dark underline dark:text-light md:text-base'
+                  className='ml-4 items-center text-lg font-medium capitalize text-dark/80 underline dark:text-light md:text-base'
                 >
                   Contact
                 </Link>
