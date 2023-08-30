@@ -86,7 +86,6 @@ export default function NavBar() {
           <CustomeLink href='/' title='Home' className='mr-4' />
           <CustomeLink href='/about' title='About' className='mx-4' />
           <CustomeLink href='/projects' title='Projects' className='mx-4' />
-          <CustomeLink href='/skills' title='Skills' className='mx-4' />
         </nav>
 
         <nav className='flex justify-center items-center flex-wrap'>

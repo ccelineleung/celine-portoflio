@@ -7,6 +7,7 @@ import profilePic from '../../public/images/profile/dev-portf-2.JPG';
 import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
+import  Skills  from '../components/Skills';
 
 // const AnimatedNumbers = ({ value }) => {
 //   const ref = useRef(null);
@@ -69,6 +70,10 @@ const about = () => {
                 forward to the opportunity to bring my skills and passion to
                 your next project.
               </p>
+              <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
+                Skills
+              </h2>
+              <Skills />
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8 md:order-1 md:col-span-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark/80 dark:bg-light/80' />
