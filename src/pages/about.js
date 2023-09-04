@@ -3,7 +3,8 @@ import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import profilePic from '../../public/images/profile/dev-portf-2.JPG';
+// import profilePic from '../../public/images/profile/dev-portf-2.JPG';
+import profilePic from '../../public/images/profile/dev-portf-2.jpg';
 import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
@@ -38,7 +39,7 @@ const about = () => {
     <>
       <Head>
         <title>
-        {`
+          {`
         Celine's Portoflie | About Me
         `}
         </title>
@@ -56,7 +57,7 @@ const about = () => {
                 Biography
               </h2>
               <p className='font-medium  dark:text-light'>
-              {`
+                {`
                 Hi, I'm Celine, a dedicated Frontend Engineer skilled in
                 curating visually engaging and highly functional digital
                 experiences. My professional journey in web development is
@@ -65,7 +66,7 @@ const about = () => {
               `}
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
-              {`
+                {`
                 My design philosophy transcends aesthetics, focusing on
                 dissecting complex challenges and engineering interfaces that
                 offer seamless user interactions. I thrive on tackling intricate
@@ -74,7 +75,7 @@ const about = () => {
               `}
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
-              {`
+                {`
                 With a proficient toolkit encompassing JavaScript, TypeScript,
                 React, Redux, and more, I possess the technical prowess to craft
                 captivating user interfaces. Notably, I've developed an NPM
