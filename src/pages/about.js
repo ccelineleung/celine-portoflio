@@ -37,7 +37,11 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>Celine's Portoflie | About Me</title>
+        <title>
+        {`
+        Celine's Portoflie | About Me
+        `}
+        </title>
         <meta name='description' content='About Me' />
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
@@ -52,20 +56,25 @@ const about = () => {
                 Biography
               </h2>
               <p className='font-medium  dark:text-light'>
+              {`
                 Hi, I'm Celine, a dedicated Frontend Engineer skilled in
                 curating visually engaging and highly functional digital
                 experiences. My professional journey in web development is
                 characterized by a persistent pursuit of innovation and a
                 commitment to delivering exceptional outcomes.
+              `}
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
+              {`
                 My design philosophy transcends aesthetics, focusing on
                 dissecting complex challenges and engineering interfaces that
                 offer seamless user interactions. I thrive on tackling intricate
                 problems and take pride in designing solutions that prioritize
                 both form and function.
+              `}
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
+              {`
                 With a proficient toolkit encompassing JavaScript, TypeScript,
                 React, Redux, and more, I possess the technical prowess to craft
                 captivating user interfaces. Notably, I've developed an NPM
@@ -74,11 +83,12 @@ const about = () => {
                 endeavors range from tech accelerator collaborations to
                 contributions in the open-source realm, including written
                 insights shared through Medium articles and tech talks.
+              `}
               </p>
               <p className='my-4 font font-medium  dark:text-light'>
-                I'm enthused about the potential of aligning my skills with your
+                {`I'm enthused about the potential of aligning my skills with your
                 projects. Let's collaborate to craft digital experiences that
-                resonate with your audience.
+                resonate with your audience.`}
               </p>
               <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>
                 Skills
