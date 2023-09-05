@@ -147,12 +147,6 @@ export default function NavBar() {
               className=''
               toggle={handleClick}
             />
-            <CustomeMobileLink
-              href='/skills'
-              title='Skills'
-              className=''
-              toggle={handleClick}
-            />
           </nav>
 
           <nav className='flex justify-center items-center flex-wrap mt-2'>

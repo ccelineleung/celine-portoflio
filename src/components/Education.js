@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import Lilcon from './Lilcon';
+import AnimatedText from '@/components/AnimatedText';
 
 const Details = ({ position, time, address, experience }) => {
   const ref = useRef(null);
@@ -40,7 +41,7 @@ const Education = () => {
   return (
     <>
       <div className='my-64'>
-        <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light md:text-6xl sm:text-4xl md:mb-16'>
+        <h2 className='font-bold text-8xl mb-32 w-full text-center dark:text-light md:text-6xl sm:text-4xl md:mb-16 text-dark/80'>
           Education
         </h2>
 
