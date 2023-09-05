@@ -4,7 +4,7 @@ import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 // import profilePic from '../../public/images/profile/dev-portf-2.JPG';
-import profilePic from '../../public/images/profile/dev-portf-2.jpg';
+// import profilePic from '../../public/images/profile/dev-portf-2.jpg';
 import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
@@ -98,13 +98,13 @@ const about = () => {
             </div>
             <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8 md:order-1 md:col-span-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark/80 dark:bg-light/80' />
-              <Image
+              {/* <Image
                 src={profilePic}
                 alt='celine'
                 className='w-full h-auto rounded-2xl'
                 priority
                 sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
-              ></Image>
+              ></Image> */}
             </div>
 
             {/* <div className='col-span-2 flex flex-col items-end justify-between '>

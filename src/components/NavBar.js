@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { LinkedInIcon, GithubIcon } from './Icons';
 import { motion } from 'framer-motion';
 import useThemeSwitcher from './hooks/useThemeSwitcher';
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/Bs';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 
 const CustomeLink = ({ href, title, className = '' }) => {
   const router = useRouter();
