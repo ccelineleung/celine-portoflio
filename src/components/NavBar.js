@@ -126,7 +126,7 @@ export default function NavBar() {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
           animate={{ scale: 1, opacity: 1 }}
-          className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'
+          className='min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/70 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'
         >
           <nav className='flex items-center flex-col justify-normal'>
             <CustomeMobileLink
@@ -155,7 +155,7 @@ export default function NavBar() {
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className='w-6 mx-3 sm:mx-1'
+              className='w-6 mx-4 sm:mx-1 bg-light rounded-2xl dark:bg-dark'
             >
               <GithubIcon />
             </motion.a>
@@ -164,7 +164,7 @@ export default function NavBar() {
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className='w-6 mx-3 sm:mx-1'
+              className='w-6 mx-4 sm:mx-1'
             >
               <LinkedInIcon />
             </motion.a>
@@ -174,9 +174,9 @@ export default function NavBar() {
               className='ml-3 flex items-center justify-center rounded-full p-1 sm:mx-1'
             >
               {mode === 'dark' ? (
-                <BsFillSunFill className='fill-light ' />
+                <BsFillSunFill className='fill-dark ' />
               ) : (
-                <BsFillMoonStarsFill className='fill-dark' />
+                <BsFillMoonStarsFill className='fill-light' />
               )}
             </button>
           </nav>

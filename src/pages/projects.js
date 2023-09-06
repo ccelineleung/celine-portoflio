@@ -15,7 +15,7 @@ const FramerImage = motion(Image);
 
 const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
   return (
-    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-dark dark:border-light dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4 '>
+    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-darkgrey/10 dark:border-light dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4 '>
       <Link
         href={projLink}
         className='p-10 w-1/2 cursor-pointer overflow-hidden lg:w-full lg:!p-7 md:!p-5 sm:!p-0'
@@ -44,7 +44,7 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
           {describution}
         </p>
         <div className='mt-2 flex items-center md:mt-1'>
-          <Link href={gitHub} className='w-10 dark:bg-dark rounded-full'>
+          <Link href={gitHub} className='w-10 dark:bg-dark/80 rounded-full'>
             <GithubIcon />
           </Link>
           <Link
@@ -61,7 +61,7 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
 
 const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
-    <article className='w-full grid justify-normal items-center rounded-3xl border border-dark bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light xs:p-4'>
+    <article className='w-full grid justify-normal items-center rounded-3xl border dark:bg-darkgrey/10 bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light xs:p-4'>
       <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto'>
         <FramerImage
           src={img}
@@ -96,7 +96,7 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
 
 const Paper = ({ title, summary, articleLink, img, types }) => {
   return (
-    <article className='w-full flex justify-between items-center border border-solid border-dark rounded-3xl shadow-2xl relative  dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4'>
+    <article className='w-full flex justify-between items-center border border-solid dark:bg-darkgrey/10 rounded-3xl shadow-2xl relative  dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4'>
       <Link
         href={articleLink}
         className='p-10 w-1/2 cursor-pointer overflow-hidden lg:w-full lg:!p-7 md:!p-5 sm:!p-0'
@@ -138,7 +138,7 @@ const projects = () => {
         <title>Celine's Portoflie | Projects</title>
         <meta name='description' content='Projects' />
       </Head>
-      <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
+      <main className='w-full mb-16 flex flex-col items-center justify-center dark:bg-darkgrey/0 dark:text-light'>
         <Layout className='pt-16'>
           <AnimatedText
             text='Projects'

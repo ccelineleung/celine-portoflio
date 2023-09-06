@@ -3,8 +3,7 @@ import Head from 'next/head';
 import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-// import profilePic from '../../public/images/profile/dev-portf-2.JPG';
-import profilePic from '../../public/images/profile/dev-portf-2.png';
+import profilePic from '../../public/images/profile/selfimg3.png';
 import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
@@ -39,9 +38,7 @@ const about = () => {
     <>
       <Head>
         <title>
-          {`
-        Celine's Portoflie | About Me
-        `}
+          {`Celine's Portoflie | About Me`}
         </title>
         <meta name='description' content='About Me' />
       </Head>
@@ -96,8 +93,8 @@ const about = () => {
               </h2>
               <Skills />
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8 md:order-1 md:col-span-8'>
-              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark/80 dark:bg-light/80' />
+            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-darkgrey/90 dark:border-light p-8 md:order-1 md:col-span-8'>
+              <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-darkgrey/80 dark:bg-light/80' />
               <Image
                 src={profilePic}
                 alt='celine'

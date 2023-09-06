@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import porfilePic from '../../public/images/profile/dev-portf-1.png';
+import porfilePic from '../../public/images/profile/selfimg.png';
 import AnimatedText from '../components/AnimatedText';
 import Link from 'next/link';
 import { LinkArrow } from '../components/Icons';
@@ -28,7 +28,7 @@ export default function Home() {
             </div>
             <div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
               <AnimatedText
-                text={`Welcome! This is Celine's Portofolio`}
+                text={`Welcome! This is Celine's Portofolio `}
                 className='!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
               />
               {/* <p className='my-4 text-base font-medium dark:text-light md:text-sm sm:text-xs'>
@@ -38,11 +38,11 @@ export default function Home() {
                 <Link
                   href='resume.pdf'
                   target={'_blank'}
-                  className='flex items-center bg-dark/80 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
+                  className='flex items-center bg-dark/80 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark/80 hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
                   // download={true}
                 >
                   Resume
-                  <LinkArrow className={'w-6 ml-1 sm:w-2'} />
+                  <LinkArrow className={'w-6 ml-1 sm:w-5'} />
                 </Link>
                 <Link
                   href='mailto:celineleung412@gmail.com'
