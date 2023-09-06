@@ -31,25 +31,25 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
         />
       </Link>
 
-      <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
-        <span className='text-primary font-medium text-xl xs:text-base '>
+      <div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 md:pt-6'>
+        <span className='text-primary font-medium text-xl md:text-sm '>
           {projType}
         </span>
         <Link href={projLink}>
-          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-2 dark:text-light hover:dark:underline-light md:my-1 sm:text-sm'>
+          <h1 className='my-2 w-full text-left text-4xl font-bold text-dark/80 hover:underline underline-offset-2 dark:text-light hover:dark:underline-light md:my-1 md:text-xl'>
             {name}
           </h1>
         </Link>
-        <p className='my-2 font-medium text-dark dark:text-light/75 md:my-1 sm:text-sm'>
+        <p className='p-2 my-2 font-medium text-dark dark:text-light/75 md:my-1 sm:text-sm'>
           {describution}
         </p>
         <div className='mt-2 flex items-center md:mt-1'>
-          <Link href={gitHub} className='w-10 dark:bg-dark/80 rounded-full'>
+          <Link href={gitHub} className='w-10  dark:bg-dark/80 rounded-full'>
             <GithubIcon />
           </Link>
           <Link
             href={projLink}
-            className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base'
+            className='my-2 ml-4 rounded-lg bg-darkgrey/80 text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base'
           >
             Download
           </Link>
@@ -62,7 +62,7 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
 const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
     <article className='w-full grid justify-normal items-center rounded-3xl border dark:bg-darkgrey/10 bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light xs:p-4'>
-      <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto'>
+      <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto sm:p-2'>
         <FramerImage
           src={img}
           alt={name}
@@ -74,11 +74,11 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
         />
       </Link>
 
-      <div className='w-full mt-0.5 grid items-start justify-between pl-6'>
+      <div className='w-full mt-0.5 grid items-start justify-between pl-6 lg:pl-3'>
         <span className='text-primary font-medium text-xl lg:text-lg md:text-base'>
           {projType}
         </span>
-        <h2 className='my-0.5 w-full text-left text-2xl font-bold dark:text-light md:text-xl'>
+        <h2 className='my-0.5 w-full text-left text-dark/80 text-2xl font-bold dark:text-light md:text-xl'>
           {name}
         </h2>
         <p className='my-0.5 font-medium text-dark dark:text-light/75 md:text-base'>
@@ -112,11 +112,11 @@ const Paper = ({ title, summary, articleLink, img, types }) => {
         />
       </Link>
       <div className='w-1/2 flex flex-col justify-between items-start p-6 my-10 lg:w-full lg:pl-0 lg:pt-6'>
-        <span className='text-primary font-medium text-lg xs:text-base'>
+        <span className='text-primary font-medium text-lg md:text-sm '>
           {types}
         </span>
         <Link href={articleLink}>
-          <h1 className='my-2 w-full text-left text-4xl font-bold hover:underline underline-offset-4 dark:text-light md:my-1 sm:text-sm'>
+          <h1 className='my-2 w-full text-left text-4xl text-dark/80 font-bold hover:underline underline-offset-4 dark:text-light md:my-1 md:text-xl'>
             {title}
           </h1>
         </Link>
