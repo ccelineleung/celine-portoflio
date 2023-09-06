@@ -16,7 +16,7 @@ const Details = ({ position, company, time, address, experience }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.8, type: 'spring' }}
       >
-        <h3 className='capitalize font-bold text-2xl dark:text-light/90 sm:text-xl xs:text-lg'>
+        <h3 className='capitalize font-bold text-2xl text-dark/90 dark:text-light/90 sm:text-xl xs:text-lg'>
           {position}&nbsp;
         </h3>
         <h3 className='capitalize font-bold text-dark/80 dark:text-light/50 md:text-sm'>
@@ -47,10 +47,13 @@ const Experience = () => {
           Experience
         </h2>
 
-        <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'>
+        <div
+          ref={ref}
+          className='w-[75%] mx-auto relative lg:w-[90%] md:w-full'
+        >
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className='absolute left-9 top-1 w-[4px] h-full bg-dark origin-top dark:bg-light dark:shadow-3xl md:w-[2px] md:left-[30px] xs:left-[20px]'
+            className='absolute left-9 top-1 w-[4px] h-full bg-dark/90 origin-top dark:bg-light dark:shadow-3xl md:w-[2px] md:left-[30px] xs:left-[20px]'
           />
 
           <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>

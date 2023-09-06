@@ -38,7 +38,7 @@ const about = () => {
     <>
       <Head>
         <title>
-          {`Celine's Portoflie | About Me`}
+          {`Celine's Portoflio | About Me`}
         </title>
         <meta name='description' content='About Me' />
       </Head>

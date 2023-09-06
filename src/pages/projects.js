@@ -135,7 +135,7 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Celine's Portoflie | Projects</title>
+        <title>{`Celine's Portoflio | Projects`}</title>
         <meta name='description' content='Projects' />
       </Head>
       <main className='w-full mb-16 flex flex-col items-center justify-center dark:bg-darkgrey/0 dark:text-light'>
