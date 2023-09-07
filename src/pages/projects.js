@@ -64,13 +64,18 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
 const SmallProj = ({ projType, name, describution, img, gitHub }) => {
   return (
     <article className='w-full grid justify-normal items-center rounded-3xl border dark:bg-darkgrey/10 bg-light shadow-2xl relative dark:border-light dark:bg-dark dark:shadow-lg dark:shadow-light xs:p-4'>
-      <Link href={gitHub} className=' p-8 h-full cursor-pointer overflow-auto sm:p-2'>
+      <Link
+        href={gitHub}
+        className=' p-8 h-full cursor-pointer overflow-auto sm:p-2'
+      >
         <FramerImage
           src={img}
           alt={name}
           className='rounded-3xl w-full h-auto overflow-hidden'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          width={1280}
+          height={720}
           priority
           sizes='(max-width:768px)100vw,(max-width:1200px)50vw,33vw'
         />
@@ -109,6 +114,8 @@ const Paper = ({ title, summary, articleLink, img, types }) => {
           className='rounded-3xl w-full h-auto overflow-hidden'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          width={1280}
+          height={720}
           priority
           sizes='(max-width:768px)100vw,(max-width:1200px)50vw,33vw'
         />

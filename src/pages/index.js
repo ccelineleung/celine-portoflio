@@ -29,7 +29,7 @@ export default function Home() {
                 width={580}
                 height={580}
                 className='w-full h-auto rounded-full pr-14 p-14  lg:inline-block lg:w-full lg:p-7'
-                priority={true}
+                priority
                 sizes='(max-width:768px)100vw,(max-width:1200px)50vw,50vw'
               />
             </div>
@@ -67,6 +67,8 @@ export default function Home() {
                     className='w-2/3 h-auto rounded-full '
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
+                    width={580}
+                    height={580}
                     priority
                     sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
                   />
@@ -78,6 +80,8 @@ export default function Home() {
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                     className='w-2/3 h-auto rounded-full '
+                    width={580}
+                    height={580}
                     priority
                     sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
                   />
