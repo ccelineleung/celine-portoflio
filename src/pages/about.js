@@ -37,9 +37,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>
-          {`Celine's Portoflio | About Me`}
-        </title>
+        <title>{`Celine's Portoflio | About Me`}</title>
         <meta name='description' content='About Me' />
       </Head>
       <main className='flex w-full flex-col items-center justify-center'>
@@ -99,8 +97,10 @@ const about = () => {
                 src={profilePic}
                 alt='celine'
                 className='w-full h-auto rounded-2xl'
-                priority
-                sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
+                width={580}
+                height={580}
+                priority={true}
+                sizes='(max-width:768px) 100vw,(max-width:1200px) 50vw,33vw'
               />
             </div>
 

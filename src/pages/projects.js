@@ -26,8 +26,10 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
           className='w-full h-auto rounded-3xl'
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          width={1280}
+          height={720}
           priority
-          sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
+          sizes='(max-width:768px)100vw,(max-width:1200px)50vw,50vw'
         />
       </Link>
 
@@ -70,7 +72,7 @@ const SmallProj = ({ projType, name, describution, img, gitHub }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
-          sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
+          sizes='(max-width:768px)100vw,(max-width:1200px)50vw,33vw'
         />
       </Link>
 
@@ -108,7 +110,7 @@ const Paper = ({ title, summary, articleLink, img, types }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
-          sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
+          sizes='(max-width:768px)100vw,(max-width:1200px)50vw,33vw'
         />
       </Link>
       <div className='w-1/2 flex flex-col justify-between items-start p-6 my-10 lg:w-full lg:pl-0 lg:pt-6'>

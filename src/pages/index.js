@@ -26,9 +26,11 @@ export default function Home() {
               <Image
                 src={porfilePic}
                 alt='Celine'
+                width={580}
+                height={580}
                 className='w-full h-auto rounded-full pr-14 p-14  lg:inline-block lg:w-full lg:p-7'
-                priority
-                sizes='(max-width:768px)100vw, (max-width:1200px)50vw,50vw'
+                priority={true}
+                sizes='(max-width:768px)100vw,(max-width:1200px)50vw,50vw'
               />
             </div>
             <div className='w-1/2 flex flex-col items-center self-center mt-10 lg:w-full lg:text-center'>
