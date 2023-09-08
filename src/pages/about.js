@@ -8,6 +8,8 @@ import { useSpring, useMotionValue, useInView } from 'framer-motion';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Skills from '../components/Skills';
+import ScrollToTopPage from '../components/ScrollToTop'
+
 
 // const AnimatedNumbers = ({ value }) => {
 //   const ref = useRef(null);
@@ -40,7 +42,7 @@ const about = () => {
         <title>{`Celine's Portoflio | About Me`}</title>
         <meta name='description' content='About Me' />
       </Head>
-      <main className='flex w-full flex-col items-center justify-center'>
+      <main className='flex w-full flex-col items-center justify-center '>
         <Layout className='pt-16'>
           <AnimatedText
             text='&#9829; About Me &#9829;'
@@ -138,6 +140,7 @@ const about = () => {
           <Experience />
           <Education />
         </Layout>
+          <ScrollToTopPage />
       </main>
     </>
   );

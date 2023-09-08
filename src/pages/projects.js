@@ -10,6 +10,7 @@ import { GithubIcon } from '@/components/Icons';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import LatchQLImg from '../../public/images/LatchQLimg.png';
+import ScrollToTopPage from '../components/ScrollToTop'
 
 const FramerImage = motion(Image);
 
@@ -203,6 +204,7 @@ const projects = () => {
             </div>
           </div>
         </Layout>
+        <ScrollToTopPage />
       </main>
     </>
   );

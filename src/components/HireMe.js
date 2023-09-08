@@ -13,7 +13,7 @@ const HireMe = () => {
           href='mailto:celineleung412@gmail.com'
           className='flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-lg border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light md:w-12 md:h-12 md:text-[10px]'
         >
-          Hire Me
+          Contact
         </Link>
       </div>
     </div>
