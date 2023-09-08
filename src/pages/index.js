@@ -9,6 +9,7 @@ import HireMe from '@/components/HireMe';
 import taro from '../../public/images/profile/taro.jpg';
 import timi from '../../public/images/profile/timi.jpg';
 import { motion } from 'framer-motion';
+import {FaRegFilePdf} from 'react-icons/fa6'
 
 const FramerImage = motion(Image);
 
@@ -49,7 +50,7 @@ export default function Home() {
                   // download={true}
                 >
                   Resume
-                  <LinkArrow className={'w-6 ml-1 sm:w-5'} />
+                  <FaRegFilePdf className={'w-6 ml-1 sm:w-5'} />
                 </Link>
                 <Link
                   href='mailto:celineleung412@gmail.com'
