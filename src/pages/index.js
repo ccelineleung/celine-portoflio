@@ -44,7 +44,7 @@ export default function Home() {
               </p> */}
               {/* <div className='flex items-center self-center mt-2 lg:self-center mb-10'> */}
                 {/* <Link
-                  href='resume.pdf'
+                  href='resume0929.pdf'
                   target={'_blank'}
                   className='flex items-center 2xl:hidden xl:hidden lg:hidden bg-dark/80 text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark/80 hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
                   // download={true}

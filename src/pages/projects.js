@@ -11,12 +11,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import LatchQLImg from '../../public/images/LatchQLimg.png';
 import ScrollToTopPage from '../components/ScrollToTop'
+import financeApp from '../../public/images/financeApp.jpg';
 
 const FramerImage = motion(Image);
 
 const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
   return (
-    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-dark bg-light shadow-2xl relative dark:bg-darkgrey/10 dark:border-light dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4 '>
+    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-light bg-light shadow-2xl relative dark:bg-darkgrey/10 dark:border-light dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4 '>
       <Link
         href={projLink}
         className='p-10 w-1/2 cursor-pointer overflow-hidden lg:w-full lg:!p-7 md:!p-5 sm:!p-0'
@@ -43,7 +44,7 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
             {name}
           </h1>
         </Link>
-        <p className='p-2 my-2 font-medium text-dark dark:text-light/75 md:my-1 sm:text-sm'>
+        <p className='p-2 my-2 font-medium text-dark dark:text-light/75 md:my-1  md:p-0 sm:text-sm'>
           {describution}
         </p>
         <div className='mt-2 flex items-center md:mt-1'>
@@ -58,6 +59,48 @@ const BigProj = ({ projType, name, describution, img, projLink, gitHub }) => {
           </Link>
         </div>
       </div>
+    </article>
+  );
+};
+
+const MidProj = ({ projType, name, describution, img, gitHub }) => {
+  return (
+    <article className='w-full flex justify-between items-center rounded-3xl border border-solid border-light bg-light shadow-2xl relative dark:bg-darkgrey/10 dark:border-light dark:shadow-lg dark:shadow-light lg:flex-col lg:p-8 xs:p-4 '>
+
+      <div className='w-1/2 flex flex-col items-start justify-between pl-10 lg:w-full lg:order-2 lg:pl-0 md:pt-3'>
+        <span className='p-2 text-primary font-medium text-xl md:text-sm  md:p-0'>
+          {projType}
+        </span>
+        <Link href={gitHub}>
+          <h1 className=' p-2 my-2 w-full text-left text-4xl font-bold text-dark/80 hover:underline underline-offset-2 dark:text-light hover:dark:underline-light md:my-1 md:text-xl md:p-0'>
+            {name}
+          </h1>
+        </Link>
+        <p className='p-2 my-2 font-medium text-dark dark:text-light/75 md:my-1  md:p-0 sm:text-sm'>
+          {describution}
+        </p>
+        <div className='p-2 mt-2 flex items-center md:mt-1'>
+          <Link href={gitHub} className='w-10  dark:bg-dark/80 rounded-full'>
+            <GithubIcon />
+          </Link>
+        </div>
+      </div>
+      <Link
+        href={gitHub}
+        className='p-8 w-1/2 cursor-pointer overflow-hidden lg:w-full lg:order-1 lg:!p-7 md:!p-5 sm:!p-0'
+      >
+        <FramerImage
+          src={img}
+          alt={name}
+          className='w-full h-auto rounded-3xl'
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+          width={1280}
+          height={720}
+          priority
+          sizes='(max-width:768px)100vw,(max-width:1200px)50vw,50vw'
+        />
+      </Link>
     </article>
   );
 };
@@ -164,6 +207,16 @@ const projects = () => {
                 img={LatchQL}
                 gitHub={'https://github.com/oslabs-beta/LatchQL'}
                 projLink={'https://www.npmjs.com/package/latchql'}
+              />
+            </div>
+
+            <div className='col-span-12'>
+            <MidProj
+                projType='Website'
+                name='FinancialApp'
+                describution='An open-source, free-to-use, lightweight middleware package that adds additional layers of security to authenticate/authorize and provide permissions for users to have different levels of access to a database through graphQL queries.'
+                img={financeApp}
+                gitHub={'https://github.com/ccelineleung/FinancialApp'}
               />
             </div>
 

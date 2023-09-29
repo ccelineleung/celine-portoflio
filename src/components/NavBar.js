@@ -91,7 +91,7 @@ export default function NavBar() {
 
         <nav className='flex justify-center items-center flex-wrap'>
           <Link
-            href='resume.pdf'
+            href='resume0929.pdf'
             target={'_blank'}
             className='flex items-center bg-dark/90 text-light  px-2 rounded-xl text-sm  hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark/80 hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
             // download={true}
@@ -192,7 +192,7 @@ export default function NavBar() {
         
           </nav>
           <Link
-            href='resume.pdf'
+            href='resume0929.pdf'
             target={'_blank'}
             className='flex items-center bg-dark/90 text-light mt-5 px-2 rounded-xl text-sm  hover:bg-light hover:text-dark  dark:bg-light dark:text-dark hover:dark:bg-dark/80 hover:dark:text-light dark:border-light md:p-2 md:px-4 md:text-base'
             // download={true}

@@ -57,24 +57,32 @@ const Experience = () => {
           />
 
           <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
-            <Details
-              position='Software Engineer'
-              company='LatchQL | OS Labs'
-              time='Aug 2022 - Apr 2023'
+          <Details
+              position='Full Stack Engineer'
+              company='FinancialApp | Open Source Contributions'
+              time='June 2023 - Oct 2023'
               address='Los Angeles, CA'
-              experience='Developed and deployed an NPM middleware package for GraphQL APIs, which enhance security protocols by utilizing JSON Web Tokens for user identification and bolster authentication and authorization accuracy by 30%.
-Engineered a mock GraphQL playground for developers to test queries for users with different permission levels.
-'
+              experience='Built a financial website with Vite, Material UI, and Redux Toolkit, helping users visualize their sales statistics with various types of graphs, and also included predictions for their sales data information for the upcoming year.'
             />
+    
+
 
             <Details
               position='Full Stack Engineer'
               company='LoanMaster | Open Source Contributions'
               time='Feb 2023 - Jun 2023'
               address='Los Angeles, CA'
-              experience='Built an interactive loan calculator website with React, Tailwind CSS, and CSS animations. Enabled real-time data synchronization and secure user authentication. Empowered users to calculate loans effortlessly, ensuring a seamless and engaging experience across devices.
-'
+              experience='Built an interactive loan calculator website with React, Tailwind CSS, and CSS animations. Enabled real-time data synchronization and secure user authentication. Empowered users to calculate loans effortlessly, ensuring a seamless and engaging experience across devices.'
             />
+            <Details
+              position='Software Engineer'
+              company='LatchQL | OS Labs'
+              time='Aug 2022 - Apr 2023'
+              address='Los Angeles, CA'
+              experience='Developed and deployed an NPM middleware package for GraphQL APIs, which enhance security protocols by utilizing JSON Web Tokens for user identification and bolster authentication and authorization accuracy by 30%.
+Engineered a mock GraphQL playground for developers to test queries for users with different permission levels.'
+            />
+
 
             <Details
               position='Full Stack Engineer'
@@ -82,8 +90,7 @@ Engineered a mock GraphQL playground for developers to test queries for users wi
               time='Feb 2023 - Jun 2023'
               address='Los Angeles, CA'
               experience='
-              Developed a feature-rich e-commerce website using React, providing customers with an immersive shopping experience. Implemented robust product listing, filtering, and search functionalities, enhancing user convenience and efficiency. The user-focused design resulted in improved engagement and accuracy, elevating the overall shopping experience. Embrace the future of online retail with this innovative e-commerce platform.
-'
+              Developed a feature-rich e-commerce website using React, providing customers with an immersive shopping experience. Implemented robust product listing, filtering, and search functionalities, enhancing user convenience and efficiency. The user-focused design resulted in improved engagement and accuracy, elevating the overall shopping experience. Embrace the future of online retail with this innovative e-commerce platform.'
             />
           </ul>
         </div>
